@@ -2,7 +2,7 @@
 # Follow below steps:
 1. Install the model 'food_search_application' and after installing make sure you have install the website model in your odoo instance.
 2. Once the model is install dump the database present in the repository.
-3. Go to website model click on 'My Dashboard' then you can see the Product Details All press View.
+3. Go to website model click on 'My Dashboard' then you can see the Product Details All press View.(Ignore 'Price Range' tab on My Dashboard)
 4. Now you can see the records which can be sort/search and you can all see the pagination.
 
 # Features:
