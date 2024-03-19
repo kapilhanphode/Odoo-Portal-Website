@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="group_mrp_executivess" model="res.groups">
+            <field name="name">Executives</field>
+            <field name="category_id" ref="base.module_category_manufacturing_manufacturing"/>
+        </record>
+    </data>
+</odoo>

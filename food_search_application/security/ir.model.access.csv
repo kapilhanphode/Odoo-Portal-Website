@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_products,access.products,model_products,,1,1,1,1
+access_product_toppings,access.product_toppings,model_product_toppings,,1,1,1,1
+access_ratings,access.product_ratings,model_ratings,,1,1,1,1
+access_toppings,access.toppings,model_toppings,,1,1,1,1
+access_toppings_groups,access.toppings_groups,model_toppings_groups,,1,1,1,1

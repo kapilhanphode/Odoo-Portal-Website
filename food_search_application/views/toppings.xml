@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_toppings_tree" model="ir.ui.view">
+            <field name="name">toppings.tree</field>
+            <field name="model">toppings</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="topping_id"/>
+                    <field name="group_id"/>
+                    <field name="topping_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_toppings_form" model="ir.ui.view">
+            <field name="name">toppings.form</field>
+            <field name="model">toppings</field>
+            <field name="arch" type="xml">
+                <form string="Product">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="topping_id"/>
+                                <field name="group_id"/>
+                                <field name="topping_name"/>
+                            </group>
+                            <group>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="toppings_action" model="ir.actions.act_window">
+            <field name="name">toppings</field>
+            <field name="res_model">toppings</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_toppings_tree"/>
+            <field name="context"></field>
+        </record>
+
+
+        <menuitem
+                id="view_toppings_menu"
+                name="Toppings"
+                parent="all_details_menu"
+                action="toppings_action"
+                sequence="4"/>
+
+    </data>
+</odoo>

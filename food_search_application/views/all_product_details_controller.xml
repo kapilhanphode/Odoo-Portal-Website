@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="all_product_list_view">
+            <t t-call="portal.portal_layout">
+                <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+                <t t-call="portal.portal_searchbar">
+                    <t t-set="title">Quotations</t>
+                </t>
+                <t t-if="products" t-call="portal.portal_table">
+                    <thead>
+                        <tr class="active">
+                            <th class="text-center">ID#</th>
+                            <th class="text-center">Product Name</th>
+                            <th class="text-center">Product Description</th>
+                            <th class="text-center">Product Average Rating</th>
+                            <th class="text-center">Product Category</th>
+                            <th class="text-center">Product Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="products" t-as="order">
+                            <tr>
+                                <td class="text-center">
+                                    <t t-out="order.product_id"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-out="order.product_name"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-out="order.product_description"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-out="order.product_rating"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-out="order.product_category"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-out="order.veg_non_veg"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </t>
+            </t>
+
+        </template>
+
+        <template id="test_view">
+            <t t-call="portal.portal_layout">
+                <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+                <t t-call="portal.portal_searchbar">
+                    <t t-set="title">Quotations</t>
+                </t>
+                <h1>Hello Testing</h1>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>
